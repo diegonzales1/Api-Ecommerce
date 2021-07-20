@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dominio.Entidades
 {
-    public class Categorias : Base
+    public class Categoria : Base
     {
         public string Modelo { get; set; }
         public string Categoria { get; set; }

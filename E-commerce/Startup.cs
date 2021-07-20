@@ -1,20 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Repositorio.Contexto;
 
 namespace E_commerce
 {
     public class Startup
     {
-
-            //teste ahdhshdhs
-            //teste Victor
-
-
         public IConfiguration Configuration { get; }
 
 
@@ -31,6 +28,10 @@ namespace E_commerce
 
             //Libera acesso do Cors
             services.AddCors();
+
+            //Banco de Dados
+            services.AddDbContext<BancoContexto>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Swagger
             services.AddSwaggerGen(c =>
