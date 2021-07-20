@@ -1,0 +1,12 @@
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.AssemblyReference.cache
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfoInputs.cache
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfo.cs
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.CoreCompileInputs.cache
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cs
+D:\Programação\Repositórios\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfo.cs
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Source\Repos\e-commerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,9 @@
+C:\Users\User\Source\Repos\e-commerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.deps.json
+C:\Users\User\Source\Repos\e-commerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\User\Source\Repos\e-commerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.pdb
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfo.cs
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\User\Source\Repos\e-commerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.pdb
