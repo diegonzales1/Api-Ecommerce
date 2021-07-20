@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LbD/1kFVarsTbF9xPwz2nWRsQlln+kx/SSzUp+XSFZunQgY5N609WiCiRqIJRIXTdvFFXv1lfH7BRhBbC5Equw==",
+  "dgSpecHash": "aWRfweWtmXVob6Ed/3I+Xt/n9Uq4eeDsYplvGITwJYgVK04iHf2HjCWncdmkHv0jFWaA4dQF/+LQ0wRF73iaog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Source\\Repos\\e-commerce\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\api-ecommerce\\Api-Ecommerce\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

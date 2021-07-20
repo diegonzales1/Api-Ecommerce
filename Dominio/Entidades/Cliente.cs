@@ -14,6 +14,6 @@ namespace Dominio.Entidades
         public string DataDeNascimento { get; set; }
         public string Sexo { get; set; }
 
-
+       
     }
 }
