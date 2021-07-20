@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dominio.Interfaces
 {
-   public interface ICategoriaRepositorio : IBaseRepositorio<Categorias>
+   public interface ICategoriaRepositorio : IBaseRepositorio<Categoria>
     {
     }
 }
