@@ -1,10 +1,16 @@
-﻿using System;
+﻿using Dominio.Entidades;
+using Dominio.Interfaces;
+using Repositorio.Contexto;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Repositorio.Repositorios
 {
-    class ClienteRepositorio
+ 
+      public  class ClienteRepositorio : BaseRepositorio<Cliente>, IClienteRepositorio
     {
-    }
+            public ClienteRepositorio(BancoContexto bancoContexto) : base(bancoContexto) { }
+        }
+    
 }

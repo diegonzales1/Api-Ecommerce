@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Repositorio.Repositorios
 {
-    class ProdutoRepositorio : BaseRepositorio<Produto>, IProdutoRepositorio
+   public class ProdutoRepositorio : BaseRepositorio<Produto>, IProdutoRepositorio
     {
         public ProdutoRepositorio(BancoContexto bancoContexto) : base(bancoContexto) { }
     }

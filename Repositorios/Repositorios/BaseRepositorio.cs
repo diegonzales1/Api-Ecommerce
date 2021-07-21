@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Repositorio.Repositorios
 {
-    class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
+   public class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
     {
         protected readonly BancoContexto BancoContexto;
 
