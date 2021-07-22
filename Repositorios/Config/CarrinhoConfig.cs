@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Repositorio.Config
+﻿namespace Repositorio.Config
 {
-   public class CarrinhoConfig
+    public class CarrinhoConfig
     {
     }
 }
