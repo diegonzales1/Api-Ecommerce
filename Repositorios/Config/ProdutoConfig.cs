@@ -1,9 +1,6 @@
 ﻿using Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Repositorio.Config
 {
@@ -20,6 +17,7 @@ namespace Repositorio.Config
             builder.Property(p => p.Tamanho).IsRequired();
             builder.Property(p => p.Quantidade).IsRequired();
             builder.Property(p => p.Preco).IsRequired();
+            builder.HasOne(c => c.Categoria).WithMany(p => p.Produtos);
         }
     }
 }

@@ -37,6 +37,7 @@ namespace E_commerce
 
             // Add Scopo
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
 
             //Swagger
             services.AddSwaggerGen(c =>
