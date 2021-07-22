@@ -1,3 +1,4 @@
+using Dominio.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Rewrite;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Repositorio.Contexto;
+using Repositorio.Repositorios;
 
 namespace E_commerce
 {
@@ -32,6 +34,9 @@ namespace E_commerce
             //Banco de Dados
             services.AddDbContext<BancoContexto>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            // Add Scopo
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
             //Swagger
             services.AddSwaggerGen(c =>
