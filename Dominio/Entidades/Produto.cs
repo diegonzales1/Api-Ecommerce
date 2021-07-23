@@ -12,10 +12,7 @@ namespace Dominio.Entidades
         public int Tamanho { get; set; }
         public int Quantidade { get; set; }
         public int CategoriaId { get; set; }
-
-        [Column(TypeName = "decimal(18,4)")]
         public decimal Preco { get; set; }
-
         public virtual Categoria Categoria { get; set; }
     }
 }
