@@ -82,3 +82,11 @@ D:\Programação\Repositórios\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.dll
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.pdb
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.genruntimeconfig.cache
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.AssemblyReference.cache
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfoInputs.cache
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.AssemblyInfo.cs
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.csproj.CoreCompileInputs.cache
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.dll
+C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.pdb
