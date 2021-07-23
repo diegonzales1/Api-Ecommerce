@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
