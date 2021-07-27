@@ -98,9 +98,11 @@ namespace E_commerce.Controllers
             try
             {
                 if (id != 0)
-                    return Ok(_categoriaRepositorio.ObterPorId(id));
+                    return Ok(_produtoRepositorio.ObterTodos().Where(
+                        p => p.CategoriaId == id
+                    ));
 
-                return Ok(_categoriaRepositorio.ObterTodos());
+                return Ok(_produtoRepositorio.ObterTodos());
             }
             catch (Exception ex)
             {
