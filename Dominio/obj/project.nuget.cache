@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "zhKg9gipu6K+Ryhcl4CqKQMxBb/lXk/0BqUcwRgeBraBK01j36k/kvJMDoEPewdv8/pr3suSyYVcAgD+lOw9lg==",
+  "dgSpecHash": "DIWNDxc9Q4NpjzKiGqC8HEjmWjSaR4cxz+9sj4Miacp19kk2beGGSsZgibJLtI3fvbeIRqaAT4drZdBif82Flg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

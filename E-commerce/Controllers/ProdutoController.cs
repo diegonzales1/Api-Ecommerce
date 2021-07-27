@@ -15,6 +15,7 @@ namespace E_commerce.Controllers
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoRepositorio _produtoRepositorio;
+        private readonly ICategoriaRepositorio _categoriaRepositorio;
 
         public ProdutoController(IProdutoRepositorio produto)
         {
@@ -36,7 +37,7 @@ namespace E_commerce.Controllers
             {
                 return BadRequest(ex.ToString());
             }
-        }
+        }       
 
         // POST api/<ProdutoController>
         [HttpPost]
@@ -84,6 +85,24 @@ namespace E_commerce.Controllers
 
                 _produtoRepositorio.Remover(produto);
                 return Ok("Excluído com sucesso!!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        [HttpGet("/Categoria/{id?}")]
+        public async Task<IActionResult> GetCategoriasId(int id = 0)
+        {
+            try
+            {
+                if (id != 0)
+                    return Ok(_produtoRepositorio.ObterTodos().Where(
+                        p => p.CategoriaId == id
+                    ));
+
+                return Ok(_produtoRepositorio.ObterTodos());
             }
             catch (Exception ex)
             {

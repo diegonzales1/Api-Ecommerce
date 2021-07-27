@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {}
+    "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Repositorios\\Repositorio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\WINDOWS 8.1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WINDOWS 8.1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,24 +58,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {
+    "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Repositorios\\Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
+        "projectUniqueName": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Repositorios\\Repositorio.csproj",
         "projectName": "Repositorio",
-        "projectPath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Repositorios\\obj\\",
+        "projectPath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Repositorios\\Repositorio.csproj",
+        "packagesPath": "C:\\Users\\WINDOWS 8.1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Repositorios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WINDOWS 8.1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,8 +90,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Api-Ecommerce\\Dominio\\Dominio.csproj"
+              "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\WINDOWS 8.1\\Documents\\TI\\Zero ao um\\API\\E-comerce\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
