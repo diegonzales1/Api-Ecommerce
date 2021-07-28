@@ -2,8 +2,6 @@
 using Dominio.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -22,7 +20,7 @@ namespace E_commerce.Controllers
         }
 
         // POST api/<CarrinhoController>
-        [HttpPost ("/adicionarProduto")]
+        [HttpPost("/adicionarProduto")]
         public async Task<IActionResult> Post([FromBody] Carrinho carrinho)
         {
             try
@@ -32,9 +30,18 @@ namespace E_commerce.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.ToString());                
+                return BadRequest(ex.ToString());
             }
         }
+
+        //[POST] carrinho -> cria o carrinho com 1 produto -> retorna Id do carrinho
+        //[POST] carrinho/{id}/item -> enviar produto que esta sendo adcionado
+        //[POST] carrinho/{id}/confirmar
+
+
+        //SE DER TEMPO:
+        //[DELETE] carrinho/{id}/item/{idItem}
+        //[PUT] carrinho/{id}/item/{idItem} -> atualizar qtd do produto
 
         // PUT api/<CarrinhoController>/5
         [HttpPut("/confirmar/{id}")]
@@ -47,16 +54,15 @@ namespace E_commerce.Controllers
                 if (id != carrinho.Id)
                     throw new Exception("Id diferente do id do carrinho");
 
-                if (carrinho.ProdutoId == produto.Id)
-                    produto -= carrinho.Produto.
 
-                var quant = carrinho.Produto.
+
+                return null;
 
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
-        }        
+        }
     }
 }
