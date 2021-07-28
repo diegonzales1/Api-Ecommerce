@@ -1,8 +1,8 @@
 ﻿using Dominio.Entidades;
 using Dominio.Interfaces;
+using E_commerce.Request;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -37,16 +37,28 @@ namespace E_commerce.Controllers
             {
                 return BadRequest(ex.ToString());
             }
-        }       
+        }
 
         // POST api/<ProdutoController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Produto produto)
+        public async Task<IActionResult> Post([FromBody] ProdutoRequest produto)
         {
             try
             {
-                _produtoRepositorio.Adicionar(produto);
-                return Ok(produto);
+                Produto prod = new Produto();
+
+                prod.Nome = produto.Nome;
+                prod.Unidade = produto.Unidade;
+                prod.Marca = produto.Marca;
+                prod.Cor = produto.Cor;
+                prod.Descricao = produto.Descricao;
+                prod.Tamanho = produto.Tamanho;
+                prod.Quantidade = produto.Quantidade;
+                prod.Preco = produto.Preco;
+                prod.CategoriaId = produto.CategoriaId;
+
+                _produtoRepositorio.Adicionar(prod);
+                return Ok(prod);
             }
             catch (Exception ex)
             {

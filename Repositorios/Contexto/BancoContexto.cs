@@ -1,8 +1,6 @@
 ﻿using Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Repositorio.Config;
 
 namespace Repositorio.Contexto
 {
@@ -12,6 +10,18 @@ namespace Repositorio.Contexto
         DbSet<Categoria> Categorias { get; set; }
         DbSet<Cliente> Clientes { get; set; }
         DbSet<Carrinho> Carrinhos { get; set; }
+
         public BancoContexto(DbContextOptions options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(BancoContexto).Assembly);
+            modelBuilder
+                .ApplyConfiguration(new ProdutoConfig())
+                .ApplyConfiguration(new CarrinhoConfig())
+                .ApplyConfiguration(new CategoriaConfig())
+                .ApplyConfiguration(new ClienteConfig());
+        }
+
     }
 }
