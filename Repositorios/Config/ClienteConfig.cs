@@ -29,8 +29,6 @@ namespace Repositorio.Config
 
             builder.Property(c => c.Sexo)
               .IsRequired();
-
-
         }
 
     }
