@@ -9,9 +9,7 @@ namespace Repositorio.Config
         public void Configure(EntityTypeBuilder<Carrinho> builder)
         {
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Cliente).IsRequired();
             builder.Property(c => c.ClienteId).IsRequired();
-            builder.Property(c => c.ItemCarrinho).IsRequired();
         }
     }
 }

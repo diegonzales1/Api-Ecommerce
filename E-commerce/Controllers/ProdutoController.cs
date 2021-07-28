@@ -15,7 +15,6 @@ namespace E_commerce.Controllers
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoRepositorio _produtoRepositorio;
-        private readonly ICategoriaRepositorio _categoriaRepositorio;
 
         public ProdutoController(IProdutoRepositorio produto)
         {
@@ -47,6 +46,9 @@ namespace E_commerce.Controllers
             {
                 Produto prod = new Produto();
 
+                Categoria categora = new Categoria();
+
+
                 prod.Nome = produto.Nome;
                 prod.Unidade = produto.Unidade;
                 prod.Marca = produto.Marca;
@@ -56,6 +58,11 @@ namespace E_commerce.Controllers
                 prod.Quantidade = produto.Quantidade;
                 prod.Preco = produto.Preco;
                 prod.CategoriaId = produto.CategoriaId;
+
+
+                if (produto.CategoriaId != categora.Id)
+                    throw new Exception("Categoria não existe");
+
 
                 _produtoRepositorio.Adicionar(prod);
                 return Ok(prod);

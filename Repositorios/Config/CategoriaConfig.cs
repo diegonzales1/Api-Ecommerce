@@ -10,7 +10,6 @@ namespace Repositorio
         {
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Modelo).IsRequired();
-            builder.Property(c => c.Produtos).IsRequired();
             builder.Property(c => c.Categorias).IsRequired();
         }
     }
