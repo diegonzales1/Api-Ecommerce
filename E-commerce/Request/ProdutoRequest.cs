@@ -10,7 +10,7 @@ namespace E_commerce.Request
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
-        [MaxLength(3, ErrorMessage = "Este campo deve possuir no máximo 3 caracteres")]
+        [MaxLength(10, ErrorMessage = "Este campo deve possuir no máximo 10 caracteres")]
         [MinLength(2, ErrorMessage = "Este campo deve possuir no minimo 2 caracteres")]
         public string Unidade { get; set; }
 
@@ -30,15 +30,12 @@ namespace E_commerce.Request
         public string Descricao { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
-        [Range(0, 99, ErrorMessage = "Entre com um número valido")]
         public int Tamanho { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
-        [Range(0, 9999999999, ErrorMessage = "Entre com um número válido")]
         public int Quantidade { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
-        [Range(1, 999999999999999, ErrorMessage = "Entre com um número válido")]
         public decimal Preco { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatório")]
