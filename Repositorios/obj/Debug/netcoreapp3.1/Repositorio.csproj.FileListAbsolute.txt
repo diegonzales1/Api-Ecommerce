@@ -31,3 +31,15 @@ C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\Repositorios\obj\Debu
 C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CopyComplete
 C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.dll
 C:\Users\WINDOWS 8.1\Documents\TI\Zero ao um\API\E-comerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.pdb
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.deps.json
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.dll
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.pdb
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Dominio.dll
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Dominio.pdb
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.AssemblyReference.cache
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfoInputs.cache
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfo.cs
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CoreCompileInputs.cache
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CopyComplete
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.dll
+D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.pdb

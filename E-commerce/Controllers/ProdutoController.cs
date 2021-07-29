@@ -48,7 +48,6 @@ namespace E_commerce.Controllers
 
                 Categoria categora = new Categoria();
 
-
                 prod.Nome = produto.Nome;
                 prod.Unidade = produto.Unidade;
                 prod.Marca = produto.Marca;
@@ -58,11 +57,6 @@ namespace E_commerce.Controllers
                 prod.Quantidade = produto.Quantidade;
                 prod.Preco = produto.Preco;
                 prod.CategoriaId = produto.CategoriaId;
-
-
-                if (produto.CategoriaId != categora.Id)
-                    throw new Exception("Categoria não existe");
-
 
                 _produtoRepositorio.Adicionar(prod);
                 return Ok(prod);
@@ -79,9 +73,6 @@ namespace E_commerce.Controllers
         {
             try
             {
-                if (id != produto.Id)
-                    return NotFound("Id diferente do id do cliente!");
-
                 _produtoRepositorio.Atualizar(produto);
                 return Ok(produto);
             }
@@ -98,9 +89,6 @@ namespace E_commerce.Controllers
             try
             {
                 var produto = _produtoRepositorio.ObterPorId(id);
-
-                if (id != produto.Id)
-                    return NotFound("Id não encontrado!!");
 
                 _produtoRepositorio.Remover(produto);
                 return Ok("Excluído com sucesso!!");
