@@ -15,10 +15,12 @@ namespace E_commerce.Controllers
     public class ProdutoController : ControllerBase
     {
         private readonly IProdutoRepositorio _produtoRepositorio;
+        private readonly ICategoriaRepositorio _categoriaRepositrio;
 
-        public ProdutoController(IProdutoRepositorio produto)
+        public ProdutoController(IProdutoRepositorio produto, ICategoriaRepositorio categoria)
         {
             _produtoRepositorio = produto;
+            _categoriaRepositrio = categoria;
         }
 
         // GET api/<ProdutoController>/5
@@ -46,8 +48,6 @@ namespace E_commerce.Controllers
             {
                 Produto prod = new Produto();
 
-                Categoria categora = new Categoria();
-
                 prod.Nome = produto.Nome;
                 prod.Unidade = produto.Unidade;
                 prod.Marca = produto.Marca;
@@ -57,7 +57,7 @@ namespace E_commerce.Controllers
                 prod.Quantidade = produto.Quantidade;
                 prod.Preco = produto.Preco;
                 prod.CategoriaId = produto.CategoriaId;
-
+                prod.Categoria = _categoriaRepositrio.ObterPorId(produto.CategoriaId);
                 _produtoRepositorio.Adicionar(prod);
                 return Ok(prod);
             }
