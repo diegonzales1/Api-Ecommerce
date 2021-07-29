@@ -9,6 +9,7 @@ namespace Dominio.Entidades
     {
         public string Modelo { get; set; }
         public string Categorias { get; set; }
+
         [JsonIgnore]
         public virtual List<Produto> Produtos { get; set; }
     }

@@ -44,6 +44,5 @@ namespace E_commerce.Request
         
         [Required(ErrorMessage = "Informe o ID da categoria desse produto! (Campo obrigatório.)")]
         public int CategoriaId { get; set; }
-
     }
 }
