@@ -43,3 +43,15 @@ D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\D
 D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CopyComplete
 D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.dll
 D:\Programação\Repositórios\Api--Ecommerce--\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.pdb
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.deps.json
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Repositorio.pdb
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.AssemblyReference.cache
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.AssemblyInfo.cs
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.csproj.CopyComplete
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\Repositorios\obj\Debug\netcoreapp3.1\Repositorio.pdb
