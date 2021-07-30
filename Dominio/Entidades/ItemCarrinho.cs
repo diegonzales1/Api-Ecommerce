@@ -9,7 +9,7 @@ namespace Dominio.Entidades
         public int ProdutoId { get; set; }
 
         [JsonIgnore]
-        public virtual List<Produto> Produto { get; set; }
+        public virtual ICollection<Produto> Produto { get; set; }
 
         [JsonIgnore]
         public virtual Carrinho Carrinho { get; set; }

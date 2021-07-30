@@ -16,7 +16,7 @@ namespace Dominio.Entidades
         public string Sexo { get; set; }
 
         [JsonIgnore]
-        public virtual List<Carrinho> Carrinhos { get; set; }
+        public virtual ICollection<Carrinho> Carrinhos { get; set; }
        
     }
 }

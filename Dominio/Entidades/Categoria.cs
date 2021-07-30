@@ -11,7 +11,7 @@ namespace Dominio.Entidades
         public string Categorias { get; set; }
 
         [JsonIgnore]
-        public virtual List<Produto> Produtos { get; set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
 

@@ -33,7 +33,7 @@ namespace E_commerce
 
             //Banco de Dados
             services.AddDbContext<BancoContexto>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Add Scopo
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();

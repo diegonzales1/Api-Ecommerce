@@ -5,14 +5,12 @@ namespace Dominio.Entidades
 {
     public class Carrinho : Base
     {
-        public Cliente Cliente { get; set; }
-
-        public ItemCarrinho ItemCarrinho { get; set; }
-
         [JsonIgnore]
+        public virtual Cliente Cliente { get; set; }
+
         public int ClienteId { get; set; }
 
         [JsonIgnore]
-        public virtual List<ItemCarrinho> Itens { get; set; }
+        public virtual ICollection<ItemCarrinho> Itens { get; set; }
     }
 }

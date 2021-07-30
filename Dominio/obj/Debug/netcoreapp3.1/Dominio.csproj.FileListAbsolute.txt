@@ -43,3 +43,12 @@ C:\Users\kayque\Source\Repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Domin
 C:\Users\kayque\Source\Repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\kayque\Source\Repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
 C:\Users\kayque\Source\Repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\zjt0719\source\repos\Api-Ecommerce\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
