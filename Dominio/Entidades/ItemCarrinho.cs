@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Dominio.Entidades
 {
     public class ItemCarrinho : Base
     {
-        public Produto Produto { get; set; }
         public int Quantidade { get; set; }
+        public int ProdutoId { get; set; }
+
+        [JsonIgnore]
+        public virtual List<Produto> Produto { get; set; }
+
+        [JsonIgnore]
+        public virtual Carrinho Carrinho { get; set; }
     }
 }

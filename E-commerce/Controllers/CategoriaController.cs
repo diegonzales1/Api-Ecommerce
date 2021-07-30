@@ -71,12 +71,13 @@ namespace E_commerce.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromBody] Categoria categoria)
+        public async Task<IActionResult> Delete(int id = 0)
         {
             try
             {
+                var categoria = _categoriaRepositorio.ObterPorId(id);
                 _categoriaRepositorio.Remover(categoria);
-                return Ok("Excluido com sucesso!");
+                return Ok(categoria);
             }
             catch (Exception ex)
             {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Dominio.Entidades
 {
@@ -14,6 +15,8 @@ namespace Dominio.Entidades
         public string DataDeNascimento { get; set; }
         public string Sexo { get; set; }
 
+        [JsonIgnore]
+        public virtual List<Carrinho> Carrinhos { get; set; }
        
     }
 }

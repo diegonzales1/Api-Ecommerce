@@ -74,10 +74,12 @@ namespace E_commerce.Controllers
             try
             {
                 var cliente = _clienteRepositorio.ObterPorId(id);
+
                 if (id != cliente.Id)
                     return NotFound("Id não encontrado!!");
+
                 _clienteRepositorio.Remover(cliente);
-                return Ok("Excluído com sucesso!!");
+                return Ok(cliente);
             }
             catch (Exception ex)
             {

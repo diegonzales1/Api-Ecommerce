@@ -17,12 +17,13 @@ namespace E_commerce.Controllers
     public class CarrinhoController : ControllerBase
     {
         private readonly ICarrinhoRepositorio _carrinhoRepositorio;
+        private readonly IClienteRepositorio _clienteRepositorio;
 
-        public CarrinhoController(ICarrinhoRepositorio carrinho)
+        public CarrinhoController(ICarrinhoRepositorio carrinho, IClienteRepositorio cliente)
         {
             _carrinhoRepositorio = carrinho;
+            _clienteRepositorio = cliente;
         }
-
 
         [HttpGet()]
         public async Task<IActionResult> Get()
@@ -31,21 +32,19 @@ namespace E_commerce.Controllers
         }
 
         //[POST] carrinho -> cria o carrinho com 1 produto -> retorna Id do carrinho
-        [HttpPost()]
-
-        // POST api/<CarrinhoController>
         [HttpPost("/adicionarProduto")]
-        public async Task<IActionResult> Post([FromBody] Carrinho carrinho)
+        public async Task<IActionResult> Post([FromBody] CarrinhoRequest carrinho)
         {
             try
             {
-                Cliente cliente = new Cliente();
+                Carrinho carrinh = new Carrinho();
 
-                if (cliente.Id != carrinho.ClienteId)
-                    throw new Exception("Cliente não cadastrado!");
-
-                _carrinhoRepositorio.Adicionar(carrinho);
-                return Ok(carrinho);
+                carrinh.ClienteId = carrinho.ClienteId;
+                carrinh.Cliente = _clienteRepositorio.ObterPorId(carrinho.ClienteId);
+                carrinh.Itens = carrinho.ItemCarrinho;
+ 
+                _carrinhoRepositorio.Adicionar(carrinh);
+                return Ok(carrinh);
             }
             catch (Exception ex)
             {
@@ -63,7 +62,7 @@ namespace E_commerce.Controllers
                 Carrinho carrinho = new Carrinho();
 
                 if (carrinho.Id == id)
-                    carrinho.ItemCarrinho.Add(item);
+                    carrinho.Itens.Add(item);
 
                 return BadRequest("NAO");
             }

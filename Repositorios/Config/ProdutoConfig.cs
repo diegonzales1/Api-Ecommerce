@@ -17,7 +17,9 @@ namespace Repositorio.Config
             builder.Property(p => p.Tamanho).IsRequired();
             builder.Property(p => p.Quantidade).IsRequired();
             builder.Property(p => p.Preco).HasPrecision(18, 4).IsRequired();
+
             builder.HasOne(p => p.Categoria).WithMany(c => c.Produtos);
+            
         }
     }
 }

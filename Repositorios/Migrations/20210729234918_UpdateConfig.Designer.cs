@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repositorio.Contexto;
 
 namespace Repositorio.Migrations
 {
     [DbContext(typeof(BancoContexto))]
-    partial class BancoContextoModelSnapshot : ModelSnapshot
+    [Migration("20210729234918_UpdateConfig")]
+    partial class UpdateConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,14 +31,10 @@ namespace Repositorio.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ItemCarrinhoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("ItemCarrinhoId");
+                    b.HasIndex("ClienteId")
+                        .IsUnique();
 
                     b.ToTable("Carrinhos");
                 });
@@ -111,9 +109,6 @@ namespace Repositorio.Migrations
                     b.Property<int?>("CarrinhoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProdutoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
@@ -179,18 +174,12 @@ namespace Repositorio.Migrations
             modelBuilder.Entity("Dominio.Entidades.Carrinho", b =>
                 {
                     b.HasOne("Dominio.Entidades.Cliente", "Cliente")
-                        .WithMany("Carrinhos")
-                        .HasForeignKey("ClienteId")
+                        .WithOne("Carrinhos")
+                        .HasForeignKey("Dominio.Entidades.Carrinho", "ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entidades.ItemCarrinho", "ItemCarrinho")
-                        .WithMany()
-                        .HasForeignKey("ItemCarrinhoId");
-
                     b.Navigation("Cliente");
-
-                    b.Navigation("ItemCarrinho");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.ItemCarrinho", b =>

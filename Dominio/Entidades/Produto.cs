@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Dominio.Entidades
 {
@@ -14,5 +16,9 @@ namespace Dominio.Entidades
         public int CategoriaId { get; set; }
         public decimal Preco { get; set; }
         public virtual Categoria Categoria { get; set; }
+
+       [JsonIgnore]
+       public virtual ItemCarrinho Itens { get; set; }
+
     }
 }

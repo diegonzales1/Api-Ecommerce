@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repositorio.Contexto;
 
 namespace Repositorio.Migrations
 {
     [DbContext(typeof(BancoContexto))]
-    partial class BancoContextoModelSnapshot : ModelSnapshot
+    [Migration("20210730000533_Update2")]
+    partial class Update2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,14 +31,9 @@ namespace Repositorio.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ItemCarrinhoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
-
-                    b.HasIndex("ItemCarrinhoId");
 
                     b.ToTable("Carrinhos");
                 });
@@ -184,13 +181,7 @@ namespace Repositorio.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entidades.ItemCarrinho", "ItemCarrinho")
-                        .WithMany()
-                        .HasForeignKey("ItemCarrinhoId");
-
                     b.Navigation("Cliente");
-
-                    b.Navigation("ItemCarrinho");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.ItemCarrinho", b =>

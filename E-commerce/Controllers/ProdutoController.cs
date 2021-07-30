@@ -91,7 +91,7 @@ namespace E_commerce.Controllers
                 var produto = _produtoRepositorio.ObterPorId(id);
 
                 _produtoRepositorio.Remover(produto);
-                return Ok("Excluído com sucesso!!");
+                return Ok(produto);
             }
             catch (Exception ex)
             {
