@@ -8,7 +8,7 @@ namespace Dominio.Entidades
     public class Categoria : Base
     {
         public string Modelo { get; set; }
-        public string Categorias { get; set; }
+        public string Genero { get; set; }
 
         [JsonIgnore]
         public virtual ICollection<Produto> Produtos { get; set; }

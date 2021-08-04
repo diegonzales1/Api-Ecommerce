@@ -13,7 +13,7 @@ namespace Repositorio.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Categorias = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Genero = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

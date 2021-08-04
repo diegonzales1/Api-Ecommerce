@@ -1,7 +1,10 @@
 ﻿using Dominio.Entidades;
 using Dominio.Interfaces;
+using E_commerce.Request;
+using E_commerce.Response;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,20 +22,52 @@ namespace E_commerce.Controllers
             _categoriaRepositorio = categoria;
         }
 
-        // GET api/<CategoriaController>/5
-        [HttpGet("{id?}")]
-        public async Task<IActionResult> Get(int id = 0)
+        // GET obter todos
+        [HttpGet()]
+        public async Task<IActionResult> Get()
         {
             try
             {
-                if (id != 0)
+                List<CategoriaResponse> categoria = new List<CategoriaResponse>();
+                var categorias = _categoriaRepositorio.ObterTodos();
+
+                foreach (var item in categorias)
                 {
-                    return Ok(_categoriaRepositorio.ObterPorId((int)id));
+                    categoria.Add(new CategoriaResponse()
+                    {
+                        ModeloCategoria = item.Modelo,
+                        GeneroCategoria = item.Genero
+                    }) ;
                 }
-                else
+
+                return Ok(categoria);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        // GET por ID
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+
+                List<CategoriaResponse> categoria = new List<CategoriaResponse>();
+                var itemCategoria = _categoriaRepositorio.ObterPorId(id);
+
+                if (itemCategoria == null)
+                    throw new Exception("Id Categoria não existe");
+
+                categoria.Add(new CategoriaResponse()
                 {
-                    return Ok(_categoriaRepositorio.ObterTodos());
-                }
+                    ModeloCategoria = itemCategoria.Modelo,
+                    GeneroCategoria = itemCategoria.Genero
+                });
+
+                return Ok(categoria);
             }
             catch (Exception ex)
             {
@@ -42,11 +77,16 @@ namespace E_commerce.Controllers
 
         // POST api/<CategoriaController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Categoria categoria)
+        public async Task<IActionResult> Post([FromBody] CategoriaRequest categoria)
         {
             try
             {
-                _categoriaRepositorio.Adicionar(categoria);
+                Categoria categ = new Categoria();
+
+                categ.Genero = categoria.Genero;
+                categ.Modelo = categoria.Modelo;
+
+                _categoriaRepositorio.Adicionar(categ);
                 return Ok(categoria);
             }
             catch (Exception ex)
@@ -56,13 +96,21 @@ namespace E_commerce.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Categoria categoria)
+        public async Task<IActionResult> Put(int id, [FromBody] CategoriaRequest categoria)
         {
             try
             {
-                if (id != categoria.Id) return BadRequest("O id é diferente do id cliente");
-                _categoriaRepositorio.Atualizar(categoria);
-                return Ok(categoria);
+                Categoria categ = new Categoria();
+                var item = _categoriaRepositorio.ObterPorId(id);
+
+                if (item == null) 
+                    throw new Exception ("O id é diferente do id categoria");
+
+                categ.Genero = categoria.Genero;
+                categ.Modelo = categoria.Modelo;
+
+                _categoriaRepositorio.Atualizar(categ);
+                return Ok(categ);
             }
             catch (Exception ex)
             {
@@ -76,8 +124,12 @@ namespace E_commerce.Controllers
             try
             {
                 var categoria = _categoriaRepositorio.ObterPorId(id);
+
+                if (categoria == null)
+                    throw new Exception("Id categoria não existe");
+
                 _categoriaRepositorio.Remover(categoria);
-                return Ok(categoria);
+                return Ok("Categoria excluída");
             }
             catch (Exception ex)
             {
