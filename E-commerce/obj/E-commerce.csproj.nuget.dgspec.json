@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\E-commerce\\E-commerce.csproj": {}
+    "D:\\Programação\\Repositórios\\Api-Ecommerce\\E-commerce\\E-commerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
+    "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\zjt0719\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\obj\\",
+        "projectPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+        "outputPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zjt0719\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +62,21 @@
         }
       }
     },
-    "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\E-commerce\\E-commerce.csproj": {
+    "D:\\Programação\\Repositórios\\Api-Ecommerce\\E-commerce\\E-commerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\E-commerce\\E-commerce.csproj",
+        "projectUniqueName": "D:\\Programação\\Repositórios\\Api-Ecommerce\\E-commerce\\E-commerce.csproj",
         "projectName": "E-commerce",
-        "projectPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\E-commerce\\E-commerce.csproj",
-        "packagesPath": "C:\\Users\\zjt0719\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\E-commerce\\obj\\",
+        "projectPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\E-commerce\\E-commerce.csproj",
+        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+        "outputPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\E-commerce\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zjt0719\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +90,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {
-                "projectPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\Repositorio.csproj"
+              "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {
+                "projectPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\Repositorio.csproj"
               }
             }
           }
@@ -98,6 +106,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.8, )"
@@ -137,6 +149,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.1.4, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -161,17 +177,21 @@
         }
       }
     },
-    "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {
+    "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
+        "projectUniqueName": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
         "projectName": "Repositorio",
-        "projectPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
-        "packagesPath": "C:\\Users\\zjt0719\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Repositorios\\obj\\",
+        "projectPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\Repositorio.csproj",
+        "packagesPath": "C:\\Users\\Diego\\.nuget\\packages\\",
+        "outputPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Repositorios\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zjt0719\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -185,8 +205,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\zjt0719\\source\\repos\\Api-Ecommerce\\Dominio\\Dominio.csproj"
+              "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\Dominio.csproj": {
+                "projectPath": "D:\\Programação\\Repositórios\\Api-Ecommerce\\Dominio\\Dominio.csproj"
               }
             }
           }

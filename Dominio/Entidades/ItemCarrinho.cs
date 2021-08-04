@@ -7,11 +7,7 @@ namespace Dominio.Entidades
     {
         public int Quantidade { get; set; }
         public int ProdutoId { get; set; }
-
-        [JsonIgnore]
-        public virtual ICollection<Produto> Produto { get; set; }
-
-        [JsonIgnore]
         public virtual Carrinho Carrinho { get; set; }
+        public virtual Produto Produto { get; set; }
     }
 }

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Dominio.Entidades
 {
-  public class Cliente : Base 
+    public class Cliente : Base
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }
@@ -17,6 +15,5 @@ namespace Dominio.Entidades
 
         [JsonIgnore]
         public virtual ICollection<Carrinho> Carrinhos { get; set; }
-       
     }
 }

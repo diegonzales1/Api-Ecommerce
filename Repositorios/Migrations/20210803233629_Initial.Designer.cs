@@ -10,8 +10,8 @@ using Repositorio.Contexto;
 namespace Repositorio.Migrations
 {
     [DbContext(typeof(BancoContexto))]
-    [Migration("20210730000533_Update2")]
-    partial class Update2
+    [Migration("20210803233629_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -118,6 +118,8 @@ namespace Repositorio.Migrations
 
                     b.HasIndex("CarrinhoId");
 
+                    b.HasIndex("ProdutoId");
+
                     b.ToTable("ItemCarrinho");
                 });
 
@@ -138,9 +140,6 @@ namespace Repositorio.Migrations
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ItensId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Marca")
                         .IsRequired()
@@ -168,8 +167,6 @@ namespace Repositorio.Migrations
 
                     b.HasIndex("CategoriaId");
 
-                    b.HasIndex("ItensId");
-
                     b.ToTable("Produtos");
                 });
 
@@ -190,7 +187,15 @@ namespace Repositorio.Migrations
                         .WithMany("Itens")
                         .HasForeignKey("CarrinhoId");
 
+                    b.HasOne("Dominio.Entidades.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Carrinho");
+
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Produto", b =>
@@ -201,13 +206,7 @@ namespace Repositorio.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entidades.ItemCarrinho", "Itens")
-                        .WithMany("Produto")
-                        .HasForeignKey("ItensId");
-
                     b.Navigation("Categoria");
-
-                    b.Navigation("Itens");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Carrinho", b =>
@@ -223,11 +222,6 @@ namespace Repositorio.Migrations
             modelBuilder.Entity("Dominio.Entidades.Cliente", b =>
                 {
                     b.Navigation("Carrinhos");
-                });
-
-            modelBuilder.Entity("Dominio.Entidades.ItemCarrinho", b =>
-                {
-                    b.Navigation("Produto");
                 });
 #pragma warning restore 612, 618
         }
