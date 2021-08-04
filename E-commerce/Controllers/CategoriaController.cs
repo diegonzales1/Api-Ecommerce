@@ -126,10 +126,10 @@ namespace E_commerce.Controllers
                 var categoria = _categoriaRepositorio.ObterPorId(id);
 
                 if (categoria == null)
-                    throw new Exception("Id categoria não existe");
+                    throw new Exception("ID categoria não existe");
 
                 _categoriaRepositorio.Remover(categoria);
-                return Ok("Categoria excluída");
+                return Ok("Categoria excluída!");
             }
             catch (Exception ex)
             {

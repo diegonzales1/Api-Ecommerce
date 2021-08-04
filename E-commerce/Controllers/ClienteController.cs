@@ -1,12 +1,13 @@
 ﻿using Dominio.Entidades;
 using Dominio.Interfaces;
+using E_commerce.Request;
+using E_commerce.Response;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace E_commerce.Controllers
 {
@@ -15,23 +16,36 @@ namespace E_commerce.Controllers
     public class ClienteController : ControllerBase
     {
         private readonly IClienteRepositorio _clienteRepositorio;
-        public ClienteController(IClienteRepositorio clienteRepositorio)
+        
+        public ClienteController(IClienteRepositorio cliente)
         {
-            _clienteRepositorio = clienteRepositorio;
+            _clienteRepositorio = cliente;
         }
-        [HttpGet("{id?}")]
-        public async Task<IActionResult> Get(int id = 0)
+
+        // GET obter todos
+        [HttpGet()]
+        public async Task<IActionResult> Get()
         {
             try
             {
-                if (id != 0)
+                List<ClienteResponse> cliente = new List<ClienteResponse>();
+                var clientes = _clienteRepositorio.ObterTodos();
+
+                foreach (var item in clientes)
                 {
-                    return Ok(_clienteRepositorio.ObterPorId((int)id));
+                    cliente.Add(new ClienteResponse()
+                    {
+                        NomeCliente = item.Nome,
+                        TelefoneCliente = item.Telefone,
+                        EmailCliente = item.Email,
+                        CPFCNPJCliente = item.CPFCNPJ,
+                        EnderecoCliente = item.Endereco,
+                        DataDeNascimentoCliente = item.DataDeNascimento,
+                        SexoCliente = item.Sexo,
+                    }) ;
                 }
-                else
-                {
-                    return Ok(_clienteRepositorio.ObterTodos());
-                }
+
+                return Ok(cliente);
             }
             catch (Exception ex)
             {
@@ -40,46 +54,72 @@ namespace E_commerce.Controllers
         }
         // POST api/<ClienteController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Cliente cliente)
+        public async Task<IActionResult> Post([FromBody] ClienteRequest cliente)
         {
             try
             {
-                _clienteRepositorio.Adicionar(cliente);
+                Cliente clien = new Cliente();
+
+                clien.Nome = cliente.Nome;
+                clien.Telefone = cliente.Telefone;
+                clien.Email = cliente.Email;
+                clien.CPFCNPJ = cliente.CPFCNPJ;
+                clien.Endereco = cliente.Endereco;
+                clien.DataDeNascimento = cliente.DataDeNascimento;
+                clien.Sexo = cliente.Sexo;
+
+                _clienteRepositorio.Adicionar(clien);
                 return Ok(cliente);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.ToString());
+                return BadRequest(ex.ToString()); 
             }
         }
         // PUT api/<ClienteController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Cliente cliente)
+        public async Task<IActionResult> Put(int id, [FromBody] ClienteRequest cliente)
         {
             try
             {
-                if (id != cliente.Id) return BadRequest("O id é diferente do id cliente");
-                _clienteRepositorio.Atualizar(cliente);
-                return Ok(cliente);
+                Cliente clien = new Cliente();
+                var item = _clienteRepositorio.ObterPorId(id);
+
+                if (item == null)
+                {
+                    throw new Exception("O ID é diferente do ID do Cliente");
+                }
+
+                clien.Nome = cliente.Nome;
+                clien.Telefone = cliente.Telefone;
+                clien.Email = cliente.Email;
+                clien.CPFCNPJ = cliente.CPFCNPJ;
+                clien.Endereco = cliente.Endereco;
+                clien.DataDeNascimento = cliente.DataDeNascimento;
+                clien.Sexo = cliente.Sexo;
+
+                _clienteRepositorio.Atualizar(clien);
+                return Ok(clien);
+
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
-        // DELETE api/<ClienteController>/5
+     
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id = 0)
         {
             try
             {
                 var cliente = _clienteRepositorio.ObterPorId(id);
 
-                if (id != cliente.Id)
-                    return NotFound("Id não encontrado!!");
+                if (cliente == null)
+                    throw new Exception("ID não encontrado!");
 
                 _clienteRepositorio.Remover(cliente);
-                return Ok(cliente);
+                return Ok("Cliente excluido com sucesso!");
             }
             catch (Exception ex)
             {

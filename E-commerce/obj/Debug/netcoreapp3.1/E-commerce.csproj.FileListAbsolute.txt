@@ -380,3 +380,11 @@ D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\kayque\Source\Repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Text.Json.dll
