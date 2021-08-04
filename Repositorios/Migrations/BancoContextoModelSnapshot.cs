@@ -43,7 +43,7 @@ namespace Repositorio.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Categorias")
+                    b.Property<string>("Genero")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

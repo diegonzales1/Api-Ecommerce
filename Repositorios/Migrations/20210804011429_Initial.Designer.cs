@@ -10,7 +10,7 @@ using Repositorio.Contexto;
 namespace Repositorio.Migrations
 {
     [DbContext(typeof(BancoContexto))]
-    [Migration("20210803233629_Initial")]
+    [Migration("20210804011429_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,7 +45,7 @@ namespace Repositorio.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Categorias")
+                    b.Property<string>("Genero")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

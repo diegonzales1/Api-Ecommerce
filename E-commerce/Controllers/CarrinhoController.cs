@@ -37,11 +37,15 @@ namespace E_commerce.Controllers
                 carrinho.Add(new CarrinhoResponse()
                 {
                     NomeCliente = item.Cliente.Nome,
-                    NomeProduto = item.Itens.Select(item => item.Produto.Nome).ToList()
+                    CPFCNPJCliente = item.Cliente.CPFCNPJ,
+                    NomeProduto = item.Itens.Select(item => item.Produto.Nome).ToList(),
+                    MarcaProduto = item.Itens.Select(item => item.Produto.Marca).ToList(),
+                    CorProduto = item.Itens.Select(item => item.Produto.Cor).ToList(),
+                    TamanhoProduto = item.Itens.Select(item => item.Produto.Tamanho).ToList(),
+                    QuantidadeProduto = item.Itens.Select(item => item.Quantidade).ToList()
                 });
             }
             
-
             return Ok(carrinho);
         }
 
@@ -77,36 +81,18 @@ namespace E_commerce.Controllers
             }
         }
 
-
-        //[POST] carrinho/{id}/item -> enviar produto que esta sendo adcionado
-        [HttpPost("{id}/item")]
-        public async Task<IActionResult> AdicionarProduto(int id, [FromBody] ItemCarrinho item)
+        // PUT api/<CarrinhoController>/5
+        [HttpPut("/confirmar/{id}")]
+        public async Task<IActionResult> Put(int id)
         {
             try
             {
                 Carrinho carrinho = new Carrinho();
-                carrinho.Itens = (ICollection<ItemCarrinho>)item.Produto;
 
-                return Ok(carrinho);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.ToString());
-            }
-        }
+                if (_carrinhoRepositorio.ObterPorId(id) == null)
+                    throw new Exception("Id de Carrinho não existe");
 
-        // PUT api/<CarrinhoController>/5
-        [HttpPut("/confirmar/{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Carrinho carrinho)
-        {
-            try
-            {
-                Produto produto = new Produto();
-
-                if (id != carrinho.Id)
-                    throw new Exception("Id diferente do id do carrinho");
-
-                return null;
+                return Ok("Compra Efetuada com Sucesso!!");
             }
             catch (Exception ex)
             {
