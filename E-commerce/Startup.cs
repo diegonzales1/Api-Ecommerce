@@ -26,7 +26,10 @@ namespace E_commerce
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                 .AddNewtonsoftJson(options =>
+              options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+             );
 
             //Libera acesso do Cors
             services.AddCors();
@@ -34,6 +37,7 @@ namespace E_commerce
             //Banco de Dados
             services.AddDbContext<BancoContexto>(options =>
                options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+           
 
             // Add Scopo
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();

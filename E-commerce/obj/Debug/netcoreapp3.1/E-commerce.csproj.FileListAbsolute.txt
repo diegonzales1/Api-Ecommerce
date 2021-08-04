@@ -372,3 +372,11 @@ C:\Users\zjt0719\source\repos\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\E
 C:\Users\zjt0719\source\repos\Api-Ecommerce\E-commerce\obj\Debug\netcoreapp3.1\E-commerce.genruntimeconfig.cache
 C:\Users\zjt0719\source\repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\zjt0719\source\repos\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Programação\Repositórios\Api-Ecommerce\E-commerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
