@@ -22,6 +22,52 @@ namespace E_commerce.Controllers
             _clienteRepositorio = cliente;
         }
 
+        // GET por nome
+        [HttpGet("nome/{nome}")]
+        public async Task<IActionResult> Get(string nome)
+        {
+            try
+            {
+                var cli = _clienteRepositorio.ObterTodos().Where(
+                        c => c.Nome.ToLower().Equals(nome.ToLower())
+                    );
+
+                return Ok(cli);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        // GET por ID
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+               ClienteResponse cliente = new ClienteResponse();
+               var item = _clienteRepositorio.ObterPorId(id);
+
+                if (item == null)
+                    throw new Exception("Id Cliente não existe");
+
+                 cliente.NomeCliente = item.Nome;
+                 cliente.TelefoneCliente = item.Telefone;
+                 cliente.EmailCliente = item.Email;
+                 cliente.CPFCNPJCliente = item.CPFCNPJ;
+                 cliente.EnderecoCliente = item.Endereco;
+                 cliente.DataDeNascimentoCliente = item.DataDeNascimento;
+                 cliente.SexoCliente = item.Sexo;
+    
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
         // GET obter todos
         [HttpGet()]
         public async Task<IActionResult> Get()
@@ -52,6 +98,7 @@ namespace E_commerce.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+
         // POST api/<ClienteController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] ClienteRequest cliente)
@@ -69,7 +116,7 @@ namespace E_commerce.Controllers
                 clien.Sexo = cliente.Sexo;
 
                 _clienteRepositorio.Adicionar(clien);
-                return Ok(cliente);
+                return Ok(clien.Id);
             }
             catch (Exception ex)
             {
@@ -82,13 +129,12 @@ namespace E_commerce.Controllers
         {
             try
             {
-                Cliente clien = new Cliente();
                 var item = _clienteRepositorio.ObterPorId(id);
 
                 if (item == null)
-                {
                     throw new Exception("O ID é diferente do ID do Cliente");
-                }
+
+                Cliente clien = item;
 
                 clien.Nome = cliente.Nome;
                 clien.Telefone = cliente.Telefone;
@@ -99,7 +145,7 @@ namespace E_commerce.Controllers
                 clien.Sexo = cliente.Sexo;
 
                 _clienteRepositorio.Atualizar(clien);
-                return Ok(clien);
+                return Ok("Alteração feita com sucesso!!");
 
             }
             catch (Exception ex)

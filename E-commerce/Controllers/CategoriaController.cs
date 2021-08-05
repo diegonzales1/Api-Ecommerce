@@ -87,7 +87,7 @@ namespace E_commerce.Controllers
                 categ.Modelo = categoria.Modelo;
 
                 _categoriaRepositorio.Adicionar(categ);
-                return Ok(categoria);
+                return Ok(categ.Id);
             }
             catch (Exception ex)
             {
@@ -100,17 +100,18 @@ namespace E_commerce.Controllers
         {
             try
             {
-                Categoria categ = new Categoria();
                 var item = _categoriaRepositorio.ObterPorId(id);
 
                 if (item == null) 
                     throw new Exception ("O id é diferente do id categoria");
 
+                Categoria categ = item;
+
                 categ.Genero = categoria.Genero;
                 categ.Modelo = categoria.Modelo;
 
                 _categoriaRepositorio.Atualizar(categ);
-                return Ok(categ);
+                return Ok("Alteração feita com sucesso!!");
             }
             catch (Exception ex)
             {

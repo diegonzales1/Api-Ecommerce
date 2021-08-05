@@ -44,7 +44,7 @@ namespace E_commerce.Controllers
                     QuantidadeProduto = item.Itens.Select(item => item.Quantidade).ToList()
                 });
             }
-            
+
             return Ok(carrinho);
         }
 
@@ -69,7 +69,7 @@ namespace E_commerce.Controllers
                     });
                 }
 
-                carrinho.Itens = itemCarrinho;     
+                carrinho.Itens = itemCarrinho;
                 _carrinhoRepositorio.Adicionar(carrinho);
 
                 return Ok(carrinho.Id);
@@ -91,7 +91,7 @@ namespace E_commerce.Controllers
                 if (_carrinhoRepositorio.ObterPorId(id) == null)
                     throw new Exception("Id de Carrinho não existe");
 
-                return Ok("Compra Efetuada com Sucesso!!");
+                return Ok("Compra Efetuada com Sucesso, Volte Sempre!!");
             }
             catch (Exception ex)
             {

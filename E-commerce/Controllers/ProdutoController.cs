@@ -110,8 +110,9 @@ namespace E_commerce.Controllers
                 prod.Preco = produto.Preco;
                 prod.CategoriaId = produto.CategoriaId;
                 prod.Categoria = _categoriaRepositrio.ObterPorId(produto.CategoriaId);
+
                 _produtoRepositorio.Adicionar(prod);
-                return Ok(prod);
+                return Ok(prod.Id);
             }
             catch (Exception ex)
             {
@@ -121,14 +122,31 @@ namespace E_commerce.Controllers
 
         // PUT api/<ProdutoController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Produto produto)
+        public async Task<IActionResult> Put(int id, [FromBody] ProdutoRequest produto)
         {
             try
             {
-                _produtoRepositorio.Atualizar(produto);
-                return Ok(produto);
+                var item = _produtoRepositorio.ObterPorId(id);
+
                 if (produto == null)
                     throw new Exception("Id Produto não existe");
+
+                Produto prod = item;
+
+                prod.Nome = produto.Nome;
+                prod.Unidade = produto.Unidade;
+                prod.Marca = produto.Marca;
+                prod.Cor = produto.Cor;
+                prod.Descricao = produto.Descricao;
+                prod.Tamanho = produto.Tamanho;
+                prod.Quantidade = produto.Quantidade;
+                prod.Preco = produto.Preco;
+                prod.CategoriaId = produto.CategoriaId;
+                prod.Categoria = _categoriaRepositrio.ObterPorId(produto.CategoriaId);
+
+                _produtoRepositorio.Atualizar(prod);
+
+                return Ok("Alteração feita com sucesso!!");
             }
             catch (Exception ex)
             {
@@ -143,10 +161,12 @@ namespace E_commerce.Controllers
             try
             {
                 var produto = _produtoRepositorio.ObterPorId(id);
+
                 if (produto == null)
                     throw new Exception("Id Produto não existe");
+
                 _produtoRepositorio.Remover(produto);
-                return Ok(produto);
+                return Ok("Produto excluído com sucesso");
             }
             catch (Exception ex)
             {
