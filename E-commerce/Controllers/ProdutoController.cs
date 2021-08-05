@@ -1,8 +1,10 @@
 ﻿using Dominio.Entidades;
 using Dominio.Interfaces;
 using E_commerce.Request;
+using E_commerce.Response;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,23 +25,73 @@ namespace E_commerce.Controllers
             _categoriaRepositrio = categoria;
         }
 
-        // GET api/<ProdutoController>/5
-        [HttpGet("{id?}")]
-        public async Task<IActionResult> Get(int id = 0)
+
+        [HttpGet()]
+        public async Task<IActionResult> Get()
         {
             try
             {
-                if (id != 0)
-                    return Ok(_produtoRepositorio.ObterPorId(id));
+                List<ProdutoResponse> produto = new List<ProdutoResponse>();
+                var itens = _produtoRepositorio.ObterTodos();
 
-                return Ok(_produtoRepositorio.ObterTodos());
+                foreach (var item in itens)
+                {
+                    produto.Add(new ProdutoResponse()
+                    {
+                        NomeProduto = item.Nome,
+                        UnidadeProduto = item.Unidade,
+                        MarcaProduto = item.Marca,
+                        CorProduto = item.Cor,
+                        DescricaoProduto = item.Descricao,
+                        TamanhoProduto = item.Tamanho,
+                        QuantidadeProduto = item.Quantidade,
+                        CategoriaId = item.CategoriaId,
+                        PrecoProduto = item.Preco,
+                        ModeloProduto = item.Categoria.Modelo,
+                        GeneroProduto = item.Categoria.Genero
+                    });
+                }
+
+                return Ok(produto);
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+                List<ProdutoResponse> produto = new List<ProdutoResponse>();
+                var itemProduto = _produtoRepositorio.ObterPorId(id);
 
+                if (itemProduto == null)
+                    throw new Exception("Id Produto não existe");
+
+                produto.Add(new ProdutoResponse()
+                {
+                    NomeProduto = itemProduto.Nome,
+                    UnidadeProduto = itemProduto.Unidade,
+                    MarcaProduto = itemProduto.Marca,
+                    CorProduto = itemProduto.Cor,
+                    DescricaoProduto = itemProduto.Descricao,
+                    TamanhoProduto = itemProduto.Tamanho,
+                    QuantidadeProduto = itemProduto.Quantidade,
+                    CategoriaId = itemProduto.CategoriaId,
+                    PrecoProduto = itemProduto.Preco,
+                    ModeloProduto = itemProduto.Categoria.Modelo,
+                    GeneroProduto = itemProduto.Categoria.Genero
+                });
+
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
         // POST api/<ProdutoController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] ProdutoRequest produto)
@@ -75,6 +127,8 @@ namespace E_commerce.Controllers
             {
                 _produtoRepositorio.Atualizar(produto);
                 return Ok(produto);
+                if (produto == null)
+                    throw new Exception("Id Produto não existe");
             }
             catch (Exception ex)
             {
@@ -89,7 +143,8 @@ namespace E_commerce.Controllers
             try
             {
                 var produto = _produtoRepositorio.ObterPorId(id);
-
+                if (produto == null)
+                    throw new Exception("Id Produto não existe");
                 _produtoRepositorio.Remover(produto);
                 return Ok(produto);
             }

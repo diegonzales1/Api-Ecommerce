@@ -16,5 +16,6 @@ namespace Dominio.Entidades
         public int CategoriaId { get; set; }
         public decimal Preco { get; set; }
         public virtual Categoria Categoria { get; set; }
+
     }
 }
